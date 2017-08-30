@@ -36,7 +36,20 @@
       <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
     <% end %>
   </div>
-</div>
+  <div class="clear"></div>
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+   <%= f.input :picture %>
+   <%= f.input :caption %>
+   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+  <% end %>
+
+    <h1>Photos</h1>
+      <% @place.photos.each do |photo| %>
+        <%= image_tag photo.picture %>
+        <%= photo.caption %>
+    <% end %>
+</div> <!-- photo form above -->
+
 <div class="clear"></div>
 
 
@@ -90,10 +103,9 @@
   <% end %>
 </div>
 
-<!-- Photo submission -->
-<div class="clear"></div>
-  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-   <%= f.input :photo %>
-    <%= f.input :caption %>
-    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+  <h1>Photos</h1>
+  <% @place.photos.each do |photo| %>
+    <div>
+      <%= photo.caption %> 
+    </div>
   <% end %>
