@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "font-awesome";
 
 .booyah-box {
@@ -74,4 +75,8 @@ blockquote p {
   width: 500px;
   height: auto;
   display: block;
+}
+
+.modal-fonts {
+  font-family: 'Open Sans', sans-serif;
 }
