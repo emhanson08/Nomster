@@ -40,7 +40,7 @@
 </div>
 
 
-<!-- Modal -->
+<!-- COMMENT MODAL -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -66,25 +66,24 @@
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
-  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary btn-lg float-right top-button" data-toggle="modal" data-target="#myModal">
     Add a comment
   </button>
   <div class="clear"></div>
 </div>
 <div class="clear"></div>
-
+<!-- COMMENT MODAL ABOVE -->
 
 <!-- PHOTO MODAL -->
 <div class="col-10 offset-1">
-  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myPhotoModal">
   Add a Photo
   </button>
 </div>
 
  <div class="clear"></div>
 
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -128,7 +127,7 @@
 
   <% @place.photos.each do |photo| %>
     <div class="booyah-box col 10 offset-1">
-      <%= image_tag photo.picture %>
+      <%= image_tag photo.picture, class: 'imageControl' %>
       <%= photo.caption %> 
     </div>
   <% end %>

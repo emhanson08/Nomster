@@ -9,6 +9,7 @@ class PhotosController < ApplicationController
   def destroy
     @place = Place.find(params[:place_id])
     @place.photo.destroy
+    redirect_to place_path(@place)
   end
 
   private
