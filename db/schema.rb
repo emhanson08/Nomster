@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831020649) do
+ActiveRecord::Schema.define(version: 20170830213935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20170831020649) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "picture"
-    t.integer  "user_id"
+    t.index ["place_id"], name: "index_photos_on_place_id", using: :btree
   end
 
   create_table "places", force: :cascade do |t|
