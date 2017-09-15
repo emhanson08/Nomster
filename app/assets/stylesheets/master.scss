@@ -84,10 +84,13 @@ blockquote p {
 .center {
   margin: auto;
 }
+
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
-  width: 100%;
-  height: 550px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
 }
+
 
 .navbar .navbar-inverse {
   background: image_url('cartographer.png');
